@@ -1,0 +1,93 @@
+/**
+* @name !11
+* @author ٴFeoreVٴ#3377
+* @description 11 
+* @version  DEV
+* @authorId 489785940546551831
+*/
+
+/*=============================================
+=                    Data                     =
+=============================================*/
+:root{
+	--DarkBG   : url(https://feorev.github.io/Themes/Discord/FVUI/assets/Wallpapers/dark.avif);   /* Link to background image / Default= url(https://feorev.github.io/Themes/Discord/assets/Wallpapers/dark.avif) ( url(link) ) */
+	--LightBG  : url(https://feorev.github.io/Themes/Discord/FVUI/assets/Wallpapers/light.avif);  /* Link to background image / Default= url(https://feorev.github.io/Themes/Discord/assets/Wallpapers/light.avif) ( url(link) ) */
+}
+:root.theme-dark{
+  --bgimage: var(--DarkBG)
+}
+:root.theme-light{
+  --bgimage: var(--LightBG)
+}
+
+:root{
+  --image: var(--bgimage);
+	--OpacityBG: 60%;
+	--BlurBG: 0px;
+}
+:root{
+	--subtheme: "FVUI-11";
+	--warring11:  "Choose ONE of the suggested themes";
+}
+
+.wordmarkWindows_a934d8::after{
+	position: absolute;
+	left: 10px;
+
+  color: red;
+	font-size: 16px;
+  font-weight: 900;
+	filter: drop-shadow(0 0 10px currentColor);
+
+	content: var(--warringmica, var(--warringdef));
+}
+
+
+
+:root{
+	--DisableBlur: calc(1 - var(--DisableOpacity));
+	--tblur4: blur(calc(var(--DisableBlur) * 4px))!important;
+	--tblur8: blur(calc(var(--DisableBlur) * 8px))!important;
+	--tblur16: blur(calc(var(--DisableBlur) * 16px))!important;
+}
+
+/*=============================================
+=                    Code                     =
+=============================================*/
+
+:root [id^="popout_"]{
+	--background-secondary: var(--opacity01a)!important; /* popups*/
+}
+
+.content_a7d72e.container_d20375>.mainTableContainer_e23072{ /* memberlist */
+  backdrop-filter: blur(8px);
+}
+
+.sidebar_a4d4d9{
+  background: none!important;
+}
+.shopScroll_e77fa3,
+.shopScroll_e77fa3>.pageWrapper_e77fa3  {
+  background: none!important;
+}
+
+.title_a7d72e,
+.channelTextArea_a7d72e, 
+.wrapper_faf5ab{
+  background: var(--full02)!important;
+}
+
+
+.app_bd26cc::before{
+  background-size: cover!important;
+  position: absolute;
+  width: 10%;
+  height:100%;
+  content: "";
+  opacity:var(--OpacityBG);
+  filter:blur(var(--BlurBG))
+}
+.app_bd26cc::before{
+  background-image: var(--image);
+}
+}
